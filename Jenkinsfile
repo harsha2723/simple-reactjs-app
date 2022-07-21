@@ -2,9 +2,6 @@ pipeline {
      agent any
      stages {
         stage("Build") {
-            script {
-              System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "3800");
-            }  
             steps {
                 sh "sudo npm install"
                 sh "sudo npm run build"
